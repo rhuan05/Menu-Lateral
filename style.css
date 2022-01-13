@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body{
+    background: linear-gradient(#FFFFFF 9.32%,rgba(0, 0, 0, 0.38) 57.95%);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    padding: 0 20px;
+}
+.header-logo{
+    font-size: 30px;
+}
+.header-hamburguer{
+    width: 30px;
+    border-top: 2px solid black;
+    cursor: pointer;
+}
+.header-hamburguer::after, .header-hamburguer::before{
+    content: '';
+    display: block;
+    margin: 6px 0;
+    width: 30px;
+    height: 2px;
+    background: black;
+}
+.header-menu{
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    background: black;
+    height: 100vh;
+    width: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+.header-menu-item{
+    display: block;
+    color: white;
+    padding: 10px 100px;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid #d6d6d6;
+}
+.header-menu-item:hover{
+    background: rgb(129, 129, 129);
+}
+header.active .header-menu{
+    width: 300px;
+}
+main{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 70px);
+    padding: 0 115px;
+    border-top: 1px solid #d6d6d6;
+}
+.main-textos{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.main-textos h1{
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 90px;
+}
+.main-textos p{
+    font-size: 20px;
+}
+.main-textos button{
+    width: 130px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+main img{
+    height: 500px;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #d6d6d6;
+}
+@media(max-width: 768px){
+    .main-textos h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .main-textos p{
+        font-size: 12px;
+    }
+    .main-textos button{
+        width: 120px;
+        padding: 10px 0px;
+        font-size: 14px;
+    }
+    main img{
+        height: 400px;
+    }
+}
+@media(max-width: 425px){
+    header.active .header-menu{
+        width: 100%;
+    }
+    main{
+        padding: 0 20px;
+    }
+    .main-textos h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .main-textos p{
+        font-size: 12px;
+    }
+    .main-textos button{
+        width: 100px;
+        padding: 8px 0px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .main-textos{
+        gap: 30px;
+    }
+    main img{
+        height: 300px;
+    }
+}
+@media(max-width: 375px){
+    .main-textos h1{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .main-textos p{
+        font-size: 10px;
+    }
+    .main-textos button{
+        width: 70px;
+        padding: 5px 0px;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .main-textos{
+        gap: 20px;
+    }
+    main img{
+        height: 250px;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
